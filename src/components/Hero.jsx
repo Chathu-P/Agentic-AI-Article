@@ -49,7 +49,7 @@ function Hero() {
           {/* Buttons */}
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#overview"
+              href="/article"
               className="group inline-flex items-center gap-3 rounded-full bg-cyan-400 px-7 py-4 font-semibold text-slate-950 transition hover:bg-cyan-300"
             >
               Explore the Article
