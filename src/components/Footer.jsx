@@ -35,7 +35,7 @@ function Footer() {
               take action.
             </p>
 
-            {/* LinkedIn link */}
+            {/* LinkedIn link 
             <a
               href="https://www.linkedin.com/"
               target="_blank"
@@ -44,7 +44,7 @@ function Footer() {
             >
               Connect on LinkedIn
               <ArrowUpRight size={14} />
-            </a>
+            </a>*/}
 
             <button
               type="button"
