@@ -152,8 +152,8 @@ function ArticlePage() {
           </button>
         </div>
 
-        <article className="mt-8 overflow-hidden rounded-[28px] border border-white/10 bg-slate-900/70 shadow-[0_30px_80px_rgba(2,6,23,0.8)]">
-          <div className="border-b border-white/10 bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/30 p-8 md:p-10">
+        <article className="article-content mt-4 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 shadow-[0_30px_80px_rgba(2,6,23,0.8)] md:mt-8 md:rounded-[28px]">
+          <div className="border-b border-white/10 bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/30 p-5 sm:p-8 md:p-10">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
               Feature Article
             </p>
@@ -170,7 +170,7 @@ function ArticlePage() {
             </p>
           </div>
 
-          <div className="space-y-10 p-8 md:p-10">
+          <div className="space-y-6 p-3 sm:space-y-10 sm:p-6 md:p-10">
             <Introduction />
             <Fundamentals />
             <Architecture />
@@ -187,7 +187,7 @@ function ArticlePage() {
         <button
           type="button"
           onClick={() => navigate("/")}
-          className="mt-8 inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-slate-900 px-4 py-2 text-sm font-medium text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300 hover:text-cyan-200"
+          className="mt-4 inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-slate-900 px-4 py-2 text-sm font-medium text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300 hover:text-cyan-200 sm:mt-8"
         >
           <ArrowLeft size={16} />
           Back to Home

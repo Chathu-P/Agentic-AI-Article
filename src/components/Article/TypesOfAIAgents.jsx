@@ -707,7 +707,7 @@ function TypesOfAIAgents() {
               className="rounded-xl border border-white/10 bg-slate-950/60 p-4"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
+                <div className="min-w-0">
                   <p className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
                     <Lightbulb size={14} className={color} aria-hidden="true" />
                     Agent response
@@ -719,7 +719,7 @@ function TypesOfAIAgents() {
                 <button
                   type="button"
                   onClick={runSimulation}
-                  className={`flex shrink-0 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-950 transition hover:brightness-110 ${button}`}
+                  className={`flex w-full shrink-0 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-950 transition hover:brightness-110 sm:w-auto ${button}`}
                 >
                   <Play size={15} fill="currentColor" aria-hidden="true" />
                   Run simulation
@@ -747,13 +747,13 @@ function TypesOfAIAgents() {
                       initial={{ left: "0%" }}
                       animate={{ left: "100%" }}
                       transition={{ duration: 1.4, ease: "easeInOut" }}
-                      className={`absolute top-0 h-0.5 w-1/4 ${button}`}
+                      className={`absolute top-0 hidden h-0.5 w-1/4 sm:block ${button}`}
                     />
-                    <div className="flex items-center justify-between gap-1">
+                    <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-1">
                       {agent.route.map((routeStep, index) => (
                         <div
                           key={routeStep}
-                          className="flex min-w-0 flex-1 items-center"
+                          className="flex min-w-0 flex-1 flex-col items-stretch sm:flex-row sm:items-center"
                         >
                           <motion.div
                             initial={{ scale: 0, opacity: 0 }}
@@ -778,14 +778,14 @@ function TypesOfAIAgents() {
                                 {String(index).padStart(2, "0")}
                               </span>
                             )}
-                            <span className="ml-1 hidden text-[9px] font-semibold text-slate-300 sm:inline">
+                            <span className="ml-1 text-center text-[8px] font-semibold text-slate-300 sm:text-[9px]">
                               {routeStep}
                             </span>
                           </motion.div>
                           {index < agent.route.length - 1 && (
                             <ArrowRight
                               size={13}
-                              className="mx-1 shrink-0 text-slate-600"
+                              className="mx-auto my-1 rotate-90 shrink-0 text-slate-600 sm:mx-1 sm:my-0 sm:rotate-0"
                               aria-hidden="true"
                             />
                           )}
