@@ -100,6 +100,18 @@ function Navbar() {
                 {link.name}
               </a>
             ))}
+
+            <button
+              type="button"
+              onClick={() => {
+                setIsOpen(false);
+                navigate(isArticlePage ? "/" : "/article");
+              }}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+            >
+              {isArticlePage ? <ArrowLeft size={16} /> : <ArrowUpRight size={16} />}
+              {isArticlePage ? "Back to Home" : "Read Article"}
+            </button>
           </div>
         </div>
       )}

@@ -74,15 +74,15 @@ function ArticlePage() {
         </button> */}
 
         <div
-          className={`mt-8 mb-8 md:fixed md:left-0 md:top-1/2 md:z-40 md:mb-0 md:flex md:-translate-y-1/2 md:items-center ${
-            isContentsOpen ? "md:w-[23rem]" : "md:w-12"
+          className={`fixed left-0 top-1/2 z-40 flex -translate-y-1/2 items-center ${
+            isContentsOpen ? "w-[calc(100vw-1rem)] max-w-[23rem]" : "w-12"
           }`}
         >
           <div
-            className={`overflow-hidden rounded-r-3xl border border-cyan-400/20 bg-slate-900/80 shadow-[0_0_30px_rgba(34,211,238,0.08)] backdrop-blur-xl md:max-h-[calc(100vh-3rem)] md:transition-[width,opacity] md:duration-300 ${
+            className={`max-h-[calc(100vh-3rem)] overflow-hidden rounded-r-3xl border border-cyan-400/20 bg-slate-900/80 shadow-[0_0_30px_rgba(34,211,238,0.08)] backdrop-blur-xl transition-[width,opacity] duration-300 ${
               isContentsOpen
-                ? "md:w-80 md:opacity-100"
-                : "md:w-0 md:border-0 md:opacity-0"
+                ? "w-[calc(100vw-4rem)] max-w-80 opacity-100"
+                : "w-0 border-0 opacity-0"
             }`}
           >
             <div className="flex items-center border-b border-white/10 bg-gradient-to-r from-cyan-500/10 to-violet-500/10 p-4">
@@ -137,7 +137,7 @@ function ArticlePage() {
           <button
             type="button"
             onClick={() => setIsContentsOpen((isOpen) => !isOpen)}
-            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-r-2xl border border-cyan-400/30 bg-slate-900 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.12)] transition hover:bg-slate-800 md:flex"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-r-2xl border border-cyan-400/30 bg-slate-900 text-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.12)] transition hover:bg-slate-800"
             aria-label={
               isContentsOpen ? "Collapse contents" : "Expand contents"
             }
